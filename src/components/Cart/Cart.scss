@@ -80,19 +80,59 @@
                 font-size: 120px;
                 opacity: 0.3;
             }
-            span{
+
+            span {
                 font-size: 26px;
                 font-weight: 700;
-                color: rgba(0,0,0,0.8);
+                color: rgba(0, 0, 0, 0.8);
                 margin-top: 10px;
                 margin-bottom: 10px;
             }
-            button{
+
+            button {
                 padding: 20px 10px;
                 margin-top: 10px;
-                background-color:#bf00ff;
-                border: 1px solid rgba(0,0,0,0.5);
+                background-color: #bf00ff;
+                border: 1px solid rgba(0, 0, 0, 0.5);
                 color: white;
+            }
+        }
+
+        .cart-footer {
+            border-top: 1px solid rgba(0, 0, 0, 0.5);
+
+            .sub-total {
+                padding: 20px 50px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                display: flex;
+                justify-content: space-between;
+
+                .text {
+                    font-size: 20px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+
+                    &.total {
+                        color: #bf00ff;
+                    }
+                }
+
+            }
+
+            .btn {
+                padding: 20px 15px;
+
+                .checkout-cta {
+                    outline: 0;
+                    border: 0;
+                    height: 50px;
+                    width: 100%;display: flex;align-items: center;justify-content: center;cursor: pointer;font-size: 16px;color: white;
+                    background-color:#bf00ff;
+                    border-bottom: 3px solid #6516aa;
+
+                }
+
             }
         }
     }
