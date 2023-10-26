@@ -14,6 +14,7 @@ import { Context } from '../../utils/context';
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
     const [showCart, setShowCart ] = useState(false);
+    const [showSearch, setShowSearch]= useState(false);
     const handleScroll = () => {
         const offSet = window.scrollY;
         if (offSet > 200) {
@@ -37,7 +38,7 @@ const Header = () => {
                     </ul>
                     <div className="center">My-ShOpp</div>
                     <div className="right">
-                        <TbSearch />
+                        <TbSearch onClick={()=>setShowSearch(true)} />
                         <AiOutlineHeart />
                         <span className="cart-item" onClick={()=>setShowCart(true)}>
                             <CgShoppingCart />
@@ -47,6 +48,7 @@ const Header = () => {
                 </div>  
             </header>
             {showCart && <Cart setShowCart={setShowCart}/>}
+            {showSearch && <Search setShowSearch={setShowSearch} /> }
         </>
     );
 };
